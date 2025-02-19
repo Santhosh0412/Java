@@ -17,7 +17,7 @@ public class Swapping {
             arr[row][i] = prev;
             prev = curr;
         }
-        row++;
+        row++; 
         for (int i = row; i < r; i++) {
             curr = arr[i][c - 1];
             arr[i][c - 1] = prev;
