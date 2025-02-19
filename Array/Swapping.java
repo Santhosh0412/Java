@@ -8,26 +8,43 @@ public class Swapping {
 
         int r = arr.length;
         int c = arr[0].length;
-        rotateMatrix(arr, r, c);
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
+        int prev, curr;
+        int row = 0, col = 0;
+
+        prev = arr[row + 1][col]; 
+        for (int i = col; i < c; i++) {
+            curr = arr[row][i];
+            arr[row][i] = prev;
+            prev = curr;
+        }
+        row++;
+        for (int i = row; i < r; i++) {
+            curr = arr[i][c - 1];
+            arr[i][c - 1] = prev;
+            prev = curr;
+        }
+        c--;
+        if (row < r) {
+            for (int i = c - 1; i >= col; i--) {
+                curr = arr[r - 1][i];
+                arr[r - 1][i] = prev;
+                prev = curr;
+            }
+        }
+        r--;
+        if (col < c) {
+            for (int i = r - 1; i >= row; i--) {
+                curr = arr[i][col];
+                arr[i][col] = prev;
+                prev = curr;
+            }
+        }
+        col++;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
-        }
-    }
-    static void rotateMatrix(int[][] mat, int r, int c) {
-        int[][] rotated = new int[c][r];
-
-        for (int i = 0; i < r; i++) {
-            for (int j = 0; j < c; j++) {
-                rotated[j][r - 1 - i] = mat[i][j];
-            }
-        }
-        for (int i = 0; i < c; i++) {
-            for (int j = 0; j < r; j++) {
-                mat[i][j] = rotated[i][j];
-            }
         }
     }
 }
