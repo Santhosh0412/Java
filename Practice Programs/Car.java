@@ -1,7 +1,7 @@
 public class Car {
     String brand;
-    Car(){
-        brand="unknown";
+    Car(String brand){
+        this.brand=brand;
         System.out.println(brand);
     }
     public void Setbrand(){
@@ -9,7 +9,7 @@ public class Car {
         System.out.print("Brand:"+brand);
     }
     public static void main(String[] args) {
-        Car obj=new Car();
+        Car obj=new Car("BENZ");
         obj.Setbrand();
 }
 }
