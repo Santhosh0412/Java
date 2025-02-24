@@ -18,10 +18,10 @@ class SavingsAcc extends Bankaccount{
         System.out.println(Bal);
         System.out.println(interest_amount);
     }
-    public static void main(String[]args){
+    public static void main(String[] args) {
         SavingsAcc obj=new SavingsAcc();
         obj.calculateinterest();
-
+    }
 }
     class CurAcc extends Bankaccount{
         Scanner s=new Scanner(System.in); 
@@ -37,6 +37,3 @@ class SavingsAcc extends Bankaccount{
             System.out.println(interest_amount);
         }
     }
-}
-
-   
