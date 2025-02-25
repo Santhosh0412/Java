@@ -20,7 +20,7 @@ public class SmartHome {
     public static class LightDevice extends DeviceType {
         public String getDeviceCategory() {
             return "Light Device";
-        }
+        }  
     }
     public static class FanDevice extends DeviceType {
         public String getDeviceCategory() {
