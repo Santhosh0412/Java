@@ -1,46 +1,26 @@
-class Vehicle {
-    String Brand;
-    int Year;
-    void startEngine() {
-        System.out.println("Vehicle engine starts");
+class Shape{
+    int l;
+    int b;
+    Shape(int l,int b){
+        this.l=l;
+        this.b=b;
     }
-}
-
-class Car extends Vehicle {
-    String FuelType;
-    void startEngine() {
-        System.out.println("Car engine starts");
+    void Area(){
+        System.out.println("Area of Rectangle");
     }
-    void drive() {
-        System.out.println("Car is driving");
-    }
-}
-class Truck extends Vehicle {
-    int loadCapacity;
-    void startEngine() {
-        System.out.println("Truck engine starts");
-    }
-    void haul() {
-        System.out.println("Truck is hauling");
-    }
-}
-public class Inheritance {
-    public static void main(String[] args) {
-        Car obj = new Car();
-        obj.Brand = "Hyundai";
-        System.out.println(obj.Brand);
-        obj.FuelType = "Petrol";
-        obj.Year = 2022;
-
-        obj.startEngine();
-        obj.drive();
-
-        Truck truckObj = new Truck();
-        truckObj.Brand = "Volvo";
-        truckObj.loadCapacity = 10000;
-        truckObj.Year = 2021;
-
-        truckObj.startEngine();
-        truckObj.haul();
-    }
-}
+  }
+    class Rectangle extends Shape{
+            Rectangle(int l,int b){
+                super(l,b);
+            }
+            void Area(){
+               int area=l*b;
+                System.out.print(area);
+            }
+            }
+            public class Inheritance{
+            public static void main(String[]args){
+                Rectangle obj=new Rectangle(5,6);
+                obj.Area();
+            }
+            }
