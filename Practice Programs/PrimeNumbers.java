@@ -9,10 +9,10 @@ public class PrimeNumbers {
                     break;
                 }
             }
-                if(isprime){
+            if(isprime){
                     System.out.print(i+" ");
-                }
             }
         }
     }
+}
 

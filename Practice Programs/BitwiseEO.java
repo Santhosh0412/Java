@@ -8,5 +8,4 @@ public class BitwiseEO{
             System.out.print("Odd");
         }
     }
-    
 }
