@@ -1,18 +1,22 @@
-public class StrongNum {
-    public static void main(String[]args){
-        int num=145;
-        int sum=0,temp;
-        int fact;
-        while(num>0){
-            temp=num%10;
-            int x=fact(temp);;
-            sum=sum+temp;
-            num=num/10;
+public class Strongnum {
+    public static void main(String[] args) {
+        int num=144;
+        int sum=0;
+        int temp=num;
+        while(temp>0){
+            int digit=temp%10;
+            int fact=1;
+            for(int i=1;i<=digit;i++){
+                fact=fact*i;
+            }
+            sum=sum+fact;
+            temp=temp/10;
         }
-        if(num==sum){
-            System.out.println("yes");
+        if(sum==num){
+            System.out.print("yes");
         }else{
-            System.out.println("no");
+         System.out.print("No");
+
         }
     }
 }
